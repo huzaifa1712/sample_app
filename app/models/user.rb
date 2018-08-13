@@ -12,4 +12,8 @@ class User < ApplicationRecord
   uniqueness:{case_sensitive:false} #just because email is upcase
   #doesn't mean it's not the same email
 
+  validates :password, presence: true, length: {minimum:6}
+
+  has_secure_password
+
 end
