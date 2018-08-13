@@ -1,0 +1,23 @@
+<% if @user.errors.any? %>
+<!-- any? - returns true if any elements present, while empty? returns true if
+no elements present(empty)-->
+
+<div id = "error_explanation">
+  <div class = "alert alert-danger">
+    <!-- @user.errors.count - number of keys in the hash @user.errors -->
+
+    <!--pluralize - available through helper.pluralize in console. Sets text to
+    1 error if only 1 in count, else <number> errors. This method works with other
+    words as well including woman, man, etc-->
+
+    The form contains <%= pluralize(@user.errors.count, "error") %>
+  </div>
+
+  <ul>
+    <% @user.errors.full_messages.each do |msg|%>
+      <li> <%= msg %> </li>
+    <% end %>
+  </ul>
+</div>
+
+<% end %>
