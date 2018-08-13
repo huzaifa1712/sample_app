@@ -1,4 +1,4 @@
-#Controller for Static Pages 
+#Controller for Static Pages  eeee
 class StaticPagesController < ApplicationController
   def home
   end
