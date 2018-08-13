@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :users #This one line adds all the routes needed for a
+  #RESTful Users resource
+  #Now we need to set up these routes (show, index etc) in the Users controller
   get '/signup', {to:'users#new'}
   #Routes
   get '/help', to: 'static_pages#help'

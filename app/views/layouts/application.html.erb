@@ -15,6 +15,8 @@
 
     <div class = "container">
     <%= yield %>
+    <!--Shows debug information on page ONLY if in test environment -->
+    <%= debug(params) if Rails.env.development? %>
   </div>
 
   <%= render 'layouts/footer'%>
