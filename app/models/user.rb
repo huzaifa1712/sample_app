@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  before_save{self.email.downcase!} #Callback to downcase email
+  #so DB doesn't treat two same email addresses but different case as different
+  #e.g foo.bar@example.com and FOO.bAr@example.com( should be treated as same)
+
   validates :name, :email, presence:true
   validates :name, length:{maximum:50}
 
