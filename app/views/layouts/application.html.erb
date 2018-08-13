@@ -14,6 +14,9 @@
     <%= render 'layouts/header'%>
 
     <div class = "container">
+      <% flash.each do |msg_type, msg|%>
+        <div class = "alert alert-<%=msg_type%>"> <%= msg %> </div>
+      <% end %>
     <%= yield %>
     <!--Shows debug information on page ONLY if in test environment -->
     <%= debug(params) if Rails.env.development? %>
