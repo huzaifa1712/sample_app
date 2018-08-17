@@ -6,6 +6,8 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:session][:email].downcase)
     if !!(user && user.authenticate(params[:session][:password]))
       #Log user in and redirect to show page
+      log_in user
+      flash[:success] = "Logged in!"
       redirect_to user
     else
       #Show errors
