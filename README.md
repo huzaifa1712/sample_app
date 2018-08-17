@@ -39,3 +39,26 @@ $ rails server
 
 For more information, see the
 [*Ruby on Rails Tutorial* book](http://www.railstutorial.org/book).
+
+Useful commands:
+To see list of routes:
+```
+$ rails routes
+```
+
+Generate a controller(with associated actions, which creates pages for those actions):
+
+```
+$ rails generate controller <plural name> <name of action1> ...<name of action2>
+```
+
+Migrate DB changes:
+```
+$ rails db:migrate
+```
+
+Rollback migration:
+
+```
+$ rails db:rollback
+```
