@@ -41,6 +41,7 @@ For more information, see the
 [*Ruby on Rails Tutorial* book](http://www.railstutorial.org/book).
 
 Useful commands:
+
 To see list of routes:
 ```
 $ rails routes
