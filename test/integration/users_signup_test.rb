@@ -20,6 +20,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     end
     follow_redirect! #follow the redirect to show user
     assert_template 'users/show'
+    assert is_logged_in?
   end
 
   test "invalid signup information" do
